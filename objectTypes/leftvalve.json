@@ -1,0 +1,164 @@
+{
+	"name": "LeftValve",
+	"plugin-id": "Sprite",
+	"sid": 131879722464288,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8461651,
+						"collisionPoly": {
+							"points": [
+								0.234375,
+								0.234375,
+								0.5,
+								0.03125,
+								0.75,
+								0.234375,
+								0.953125,
+								0.5,
+								0.765625,
+								0.765625,
+								0.5,
+								0.953125,
+								0.21875,
+								0.765625,
+								0.03125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 455600962450704,
+				"name": "Off",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 2,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 938080,
+						"collisionPoly": {
+							"points": [
+								0.234375,
+								0.234375,
+								0.5,
+								0.03125,
+								0.75,
+								0.234375,
+								0.953125,
+								0.5,
+								0.765625,
+								0.765625,
+								0.5,
+								0.953125,
+								0.21875,
+								0.765625,
+								0.03125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1246870,
+						"collisionPoly": {
+							"points": [
+								0.171875,
+								0.171875,
+								0.5,
+								0.125,
+								0.8125,
+								0.171875,
+								0.875,
+								0.5,
+								0.828125,
+								0.828125,
+								0.5,
+								0.875,
+								0.15625,
+								0.828125,
+								0.109375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3611252,
+						"collisionPoly": {
+							"points": [
+								0.234375,
+								0.234375,
+								0.5,
+								0.03125,
+								0.765625,
+								0.21875,
+								0.96875,
+								0.5,
+								0.765625,
+								0.765625,
+								0.5,
+								0.96875,
+								0.21875,
+								0.765625,
+								0.03125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 890867633203038,
+				"name": "Left Turn",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 2,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

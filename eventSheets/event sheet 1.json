@@ -1,0 +1,347 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Valve",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 682785450401394
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 645221038235602
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 286973494523137,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "LeftValve",
+					"sid": 440980364373606,
+					"parameters": {
+						"animation": "\"Off\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "RightValve",
+					"sid": 443877146675301,
+					"parameters": {
+						"animation": "\"Off\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 776944425848350
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 607676080045576,
+					"parameters": {
+						"object": "Paper"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 390255668495635,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 468098888502983,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 197521877829512,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "LeftValve"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 158010794102537,
+					"parameters": {
+						"variable": "Valve",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "LeftValve",
+					"sid": 863643379265942,
+					"parameters": {
+						"animation": "\"Left Turn\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 426713979354409
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 970915029793565,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "RightValve"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 792247784023777,
+					"parameters": {
+						"variable": "Valve",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "RightValve",
+					"sid": 488332367390868,
+					"parameters": {
+						"animation": "\"Right Turn\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 705198590978418
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 804228282037355,
+					"parameters": {
+						"variable": "Valve",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Valve",
+					"sid": 413383040320657,
+					"parameters": {
+						"animation": "\"Empty\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 134452132006670
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 960121411667432,
+					"parameters": {
+						"variable": "Valve",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Valve",
+					"sid": 207212727954328,
+					"parameters": {
+						"animation": "\"Qtr Full\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 952180661885772
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 656574544364340,
+					"parameters": {
+						"variable": "Valve",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Valve",
+					"sid": 610894925560716,
+					"parameters": {
+						"animation": "\"Half Full\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 109545996591129
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 173209401691141,
+					"parameters": {
+						"variable": "Valve",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Valve",
+					"sid": 916927442680045,
+					"parameters": {
+						"animation": "\"34 Full\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 431565143588339
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 981325636678074,
+					"parameters": {
+						"variable": "Valve",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Valve",
+					"sid": 616093023342363,
+					"parameters": {
+						"animation": "\"Full\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 966488600063136
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 142186652954905,
+					"parameters": {
+						"variable": "Valve",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Wall3",
+					"sid": 296847439505022
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 496081710522128,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 838326977529082
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 552321948995512,
+					"parameters": {
+						"object": "Paper2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 305369228256055
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 953593065966784
+				}
+			],
+			"sid": 988467431493904
+		}
+	],
+	"sid": 826693878308960
+}
